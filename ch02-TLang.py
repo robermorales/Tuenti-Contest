@@ -4,7 +4,7 @@ import commands
 
 def interpret(line):
 	line = (line.replace('^','(')).replace('$',')')
-	query = "[ch02-expressions], expr(" + line.replace(' ', ', ') + ", X), write(X), halt."	
+	query = "['ch02-expressions'], expr(" + line.replace(' ', ', ') + ", X), write(X), halt."	
 	cmd = 'prolog -q -g "' + query + '"'
 	return commands.getoutput(cmd)
 	
